@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Cost of a Click</title>
+<meta name="description" content="The Environment Remembers is an interactive installation that reveals the physical resources behind everyday AI interactions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gilda+Display&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@100..900&family=Fragment+Mono&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=14">
+</head>
+<body>
+<div class="page">
+
+  <header class="nav">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html" aria-label="The Environment Remembers — home">
+        <img class="nav-mark" src="assets/img/logo-mark.svg?v=14" alt="" width="50" height="50">
+        <span class="nav-wordmark">The<br>Environment<br>Remembers</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="is-current">About</a>
+        <a href="research.html">Research</a>
+        <a href="code-your-dream.html">Code Your Dreams</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 01 About the project -->
+  <section class="section about-hero">
+    <div class="about-hero-inner">
+      <div class="about-copy" data-appear="y:0,threshold:0,replay">
+        <span class="badge"><span class="badge-dot"><i><b></b></i></span>About the project</span>
+        <h1>AI feels invisible.<br>Its impact <span class="accent">isn’t.</span></h1>
+        <p class="body">The Environment Remembers is an interactive installation that reveals the physical resources behind everyday AI interactions.</p>
+      </div>
+      <div class="about-globe" data-appear="scale:0.94,delay:0.1,threshold:0.2">
+        <div id="about-globe" style="position:absolute;inset:0;"></div>
+        <div class="sphere sphere-small"></div>
+        <div class="sphere sphere-large"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hairline"></div>
+
+  <!-- 01b A project supported by -->
+  <section class="section supporters">
+    <h2 data-appear="y:16,threshold:0.3">A project supported by</h2>
+    <div class="supporter-logos" data-appear="y:16,delay:0.1,threshold:0.3">
+      <a class="supporter-logo" href="https://www.codeyourdreams.org/" target="_blank" rel="noopener">
+        <img src="assets/img/logo-code-your-dreams.png?v=14" alt="Code Your Dreams">
+      </a>
+      <a class="supporter-logo" href="https://www.depaul.edu/" target="_blank" rel="noopener">
+        <img src="assets/img/logo-depaul.png?v=14" alt="DePaul University">
+      </a>
+    </div>
+  </section>
+
+  <!-- 02 How it works -->
+  <section class="section how">
+    <span class="badge" data-appear="y:16,delay:0,threshold:0.4"><span class="badge-dot"><i><b></b></i></span>How it works</span>
+    <div class="flow" data-appear="x:-28,threshold:0.15">
+      <div class="flow-step">
+        <div class="flow-icon" style="color: rgba(255,255,255,0.86)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 8.625 17.25 L 0.75 17.25 C 0.336 17.25 0 16.914 0 16.5 L 0 8.625 C 0 3.862 3.862 0 8.625 0 L 8.625 0 C 13.388 0 17.25 3.862 17.25 8.625 L 17.25 8.625 C 17.25 13.388 13.388 17.25 8.625 17.25 Z" transform="translate(3.75 3)"/>
+          </svg>
+        </div>
+        <p class="title">Prompt</p>
+        <p class="caption">Digital action</p>
+      </div>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 0 0 L 9.75 0" transform="translate(3.75 12)"/>
+          <path d="M 0 0 L 6.75 6.75 L 0 13.5 Z" transform="translate(13.5 5.25)"/>
+        </svg>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-icon" style="color: rgba(255,255,255,0.86)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 0.75 6 C 0.336 6 0 5.664 0 5.25 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 15.75 0 C 16.164 0 16.5 0.336 16.5 0.75 L 16.5 5.25 C 16.5 5.664 16.164 6 15.75 6 Z" transform="translate(3.75 13.5)"/>
+            <path d="M 0.75 6 C 0.336 6 0 5.664 0 5.25 L 0 0.75 C 0 0.336 0.336 0 0.75 0 L 15.75 0 C 16.164 0 16.5 0.336 16.5 0.75 L 16.5 5.25 C 16.5 5.664 16.164 6 15.75 6 Z" transform="translate(3.75 4.5)"/>
+          </svg>
+        </div>
+        <p class="title">Data center</p>
+        <p class="caption">Physical infrastructure</p>
+      </div>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 0 0 L 9.75 0" transform="translate(3.75 12)"/>
+          <path d="M 0 0 L 6.75 6.75 L 0 13.5 Z" transform="translate(13.5 5.25)"/>
+        </svg>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-icon" style="color: rgb(87, 104, 255)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 15 12 C 15 5.25 7.5 0 7.5 0 C 7.5 0 0 5.25 0 12 C 0 16.142 3.358 19.5 7.5 19.5 C 11.642 19.5 15 16.142 15 12 Z" transform="translate(4.5 1.5)"/>
+            <path d="M 0 3.75 C 1.875 3.434 3.432 1.875 3.75 0" transform="translate(12.75 14.25)"/>
+          </svg>
+        </div>
+        <p class="title">Water &amp; energy</p>
+        <p class="caption">Environmental cost</p>
+      </div>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 0 0 L 9.75 0" transform="translate(3.75 12)"/>
+          <path d="M 0 0 L 6.75 6.75 L 0 13.5 Z" transform="translate(13.5 5.25)"/>
+        </svg>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-icon" style="color: rgba(255,255,255,0.86)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 0 0 C 1.771 -0.001 3.439 0.833 4.5 2.25" transform="translate(18 11.25)"/>
+            <path d="M 0 2.25 C 1.061 0.833 2.729 -0.001 4.5 0" transform="translate(1.5 11.25)"/>
+            <path d="M 0 3.75 C 0 1.679 1.679 0 3.75 0 C 5.821 0 7.5 1.679 7.5 3.75 C 7.5 5.821 5.821 7.5 3.75 7.5 C 1.679 7.5 0 5.821 0 3.75 Z" transform="translate(8.25 9.75)"/>
+            <path d="M 0 3 C 1.095 1.141 3.092 0 5.25 0 C 7.408 0 9.405 1.141 10.5 3" transform="translate(6.75 17.25)"/>
+            <path d="M 0 2.25 C 0.39 0.741 1.87 -0.218 3.407 0.043 C 4.944 0.304 6.025 1.698 5.894 3.252 C 5.764 4.805 4.465 6 2.906 6" transform="translate(15.094 5.25)"/>
+            <path d="M 2.999 6 C 1.44 6 0.141 4.805 0.011 3.252 C -0.12 1.698 0.961 0.304 2.498 0.043 C 4.034 -0.218 5.515 0.741 5.905 2.25" transform="translate(3.001 5.25)"/>
+          </svg>
+        </div>
+        <p class="title">Community</p>
+        <p class="caption">Human impact</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 About the installation -->
+  <section class="section installation">
+    <div class="installation-inner">
+      <div class="about-copy" data-appear="y:24,threshold:0.2,replay">
+        <span class="badge"><span class="badge-dot"><i><b></b></i></span>About the installation</span>
+        <h2>Making the invisible<br>cost of AI visible.</h2>
+        <p class="body">Visitors submit an AI prompt and watch its estimated environmental cost become physical. Through light, water, and a printed receipt, an invisible digital action is translated into something tangible.</p>
+      </div>
+
+      <div class="panels" data-appear="y:30,scale:0.97,delay:0.1,threshold:0.2">
+        <div class="panel panel-1">
+          <p class="label">1. Prompt</p>
+          <div class="mockup">
+            <div class="screen">
+              <p class="question">What do<br>you want<br>to ask AI?</p>
+              <div class="input">
+                <span>Type your prompt</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M 0 0 L 9.75 0" transform="translate(3.75 12)"/>
+                  <path d="M 0 0 L 6.75 6.75 L 0 13.5 Z" transform="translate(13.5 5.25)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-2">
+          <p class="label">2. Water drop</p>
+          <div class="mockup">
+            <div class="cylinder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M 15 12 C 15 5.25 7.5 0 7.5 0 C 7.5 0 0 5.25 0 12 C 0 16.142 3.358 19.5 7.5 19.5 C 11.642 19.5 15 16.142 15 12 Z" transform="translate(4.5 1.5)"/>
+                <path d="M 0 3.75 C 1.875 3.434 3.432 1.875 3.75 0" transform="translate(12.75 14.25)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-3">
+          <p class="label">3. Impact receipt</p>
+          <div class="mockup">
+            <div class="receipt">
+              <p class="title">Your prompt<br>has a cost.</p>
+              <div class="divider"></div>
+
+              <div class="receipt-row">
+                <div class="value">
+                  <span class="rlabel">Water</span>
+                  <span class="amount">0.32 L</span>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M 15 12 C 15 5.25 7.5 0 7.5 0 C 7.5 0 0 5.25 0 12 C 0 16.142 3.358 19.5 7.5 19.5 C 11.642 19.5 15 16.142 15 12 Z" transform="translate(4.5 1.5)"/>
+                  <path d="M 0 3.75 C 1.875 3.434 3.432 1.875 3.75 0" transform="translate(12.75 14.25)"/>
+                </svg>
+              </div>
+
+              <div class="receipt-row">
+                <div class="value">
+                  <span class="rlabel">Energy</span>
+                  <span class="amount">0.24 Wh</span>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M 10.5 0 L 9 7.5 L 15 9.75 L 4.5 21 L 6 13.5 L 0 11.25 Z" transform="translate(4.5 1.5)"/>
+                </svg>
+              </div>
+
+              <div class="receipt-row">
+                <div class="value">
+                  <span class="rlabel">Carbon</span>
+                  <span class="amount">0.38 g</span>
+                </div>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M 5.994 7.5 C 5.994 3.358 9.351 0 13.494 0 C 17.636 0 20.994 3.358 20.994 7.5 C 20.994 11.642 17.636 15 13.494 15 L 5.244 15 C 3.212 14.997 1.363 13.823 0.499 11.984 C -0.366 10.145 -0.091 7.972 1.203 6.406 C 2.498 4.839 4.58 4.161 6.549 4.663" transform="translate(1.506 4.5)"/>
+                </svg>
+              </div>
+
+              <div class="divider"></div>
+              <p class="footer">Thank you for<br>being aware.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="play">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 0 0.736 L 0 17.259 C 0.005 17.527 0.153 17.772 0.388 17.902 C 0.623 18.031 0.91 18.025 1.139 17.886 L 14.647 9.625 C 14.866 9.492 15 9.254 15 8.997 C 15 8.741 14.866 8.503 14.647 8.37 L 1.139 0.109 C 0.91 -0.03 0.623 -0.036 0.388 0.093 C 0.153 0.222 0.005 0.468 0 0.736 Z" transform="translate(6.75 3.003)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Closing statement -->
+  <section class="section closing">
+    <div class="closing-inner">
+      <div class="closing-statement" data-appear="y:26,threshold:0.2">
+        <h2>We are not asking people<br>to stop using AI.</h2>
+        <h2>We are asking them<br>to <span class="accent">see</span> what it <span class="accent">requires.</span></h2>
+      </div>
+      <div data-appear="y:26,delay:0.22,threshold:0.2" style="flex:1 1 0;min-width:0">
+        <p class="closing-note">By making digital consumption visible, the project invites more thoughtful conversations about technology, infrastructure, and environmental responsibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real places / Explore the map -->
+  <section class="places">
+    <div class="places-copy">
+      <div class="places-text">
+        <span class="badge" data-appear="delay:0.5,threshold:0.5"><span class="badge-dot"><i><b></b></i></span>BEHIND EVERY ANSWER</span>
+        <h1 data-appear="y:40,delay:0.2,threshold:0.5">Real Places.<br>Real Impact.</h1>
+        <h3 data-appear="y:40,delay:0.2,threshold:0.5">Explore the data centers  community and the resources they rely on.</h3>
+      </div>
+      <a class="btn-secondary" href="interactive-map.html">
+        Explore the Map
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" transform="translate(3 3)"/>
+          <path d="M 6 0 L 0 6" transform="translate(9 9)"/>
+          <path d="M 0 0 L 4.5 0 L 4.5 4.5" transform="translate(10.5 9)"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="places-map">
+      <canvas class="starfield" data-starfield></canvas>
+      <div class="intersect">
+        <img src="assets/img/us-divided.png" alt="Midwest states rendered as a field of light points">
+        <span class="state-name" style="left:107.66px; top:278.17px">IOWA</span>
+        <span class="state-name" style="left:265.7px; bottom:159.38px">ILLINOIS</span>
+        <span class="state-name" style="left:389.13px; bottom:159.38px">INDIANA</span>
+        <span class="state-name" style="left:523.88px; bottom:163.96px">OHIO</span>
+        <span class="state-name" style="left:230.8px; top:185.06px">WISCONSIN</span>
+        <span class="state-name" style="left:126.3px; bottom:102.04px">MISSOURI</span>
+        <span class="state-name" style="left:426.42px; top:232.72px">MICHIGAN</span>
+      </div>
+      <img class="us-outline" src="assets/img/us-outline.svg" alt=""
+           style="position:absolute; left:24.94px; top:62.98px; width:637.52px; height:515.78px">
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team" data-appear="y:44,threshold:0.15">
+    <div class="team-top">
+      <span class="tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M 0 3.752 C 1.522 1.412 4.124 0 6.916 0 C 9.708 0 12.31 1.412 13.832 3.752" transform="translate(0.959 14.998)"/>
+          <path d="M 0 0 C 2.792 -0.002 5.394 1.41 6.916 3.75" transform="translate(16.125 15)"/>
+          <path d="M 0 4.875 C 0 2.183 2.183 0 4.875 0 C 7.567 0 9.75 2.183 9.75 4.875 C 9.75 7.567 7.567 9.75 4.875 9.75 C 2.183 9.75 0 7.567 0 4.875 Z" transform="translate(3 5.25)"/>
+          <path d="M 0 0.347 C 1.824 -0.38 3.906 0.057 5.282 1.457 C 6.659 2.858 7.061 4.947 6.303 6.758 C 5.545 8.569 3.774 9.748 1.81 9.75" transform="translate(14.315 5.25)"/>
+        </svg>
+        Team Members
+      </span>
+      <div class="team-heading" data-appear="y:60,delay:0.4,threshold:0">
+        <h2 class="a">Meet Our</h2>
+        <span class="b"> Team Members</span>
+      </div>
+    </div>
+
+    <p class="reveal-text"
+       data-reveal-text="We are a multidisciplinary team of designers, researchers, and developers exploring how interaction design can make the invisible environmental impact of AI visible and meaningful."
+       data-reveal-start="0"></p>
+
+    <div class="team-grid" data-appear="y:20,threshold:0.1">
+      <a class="team-card-link" href="https://twitter.com" target="_blank" rel="noopener">
+        <div class="team-card">
+          <img class="photo" src="assets/img/team-sameed.png" alt="Sameed Iqbal">
+          <div class="info">
+            <span class="name">Sameed Iqbal</span>
+            <span class="role">Research and Community Content Lead</span>
+          </div>
+        </div>
+      </a>
+      <a class="team-card-link" href="https://twitter.com" target="_blank" rel="noopener">
+        <div class="team-card">
+          <img class="photo" src="assets/img/team-arushi.png" alt="Arushi Malhotra">
+          <div class="info">
+            <span class="name">Arushi Malhotra</span>
+            <span class="role">Technical Lead</span>
+          </div>
+        </div>
+      </a>
+      <a class="team-card-link" href="https://twitter.com" target="_blank" rel="noopener">
+        <div class="team-card">
+          <img class="photo" src="assets/img/team-seeza.png" alt="Seeza Wasim">
+          <div class="info">
+            <span class="name">Seeza Wasim</span>
+            <span class="role">Design and Fabrication Lead</span>
+          </div>
+        </div>
+      </a>
+      <a class="team-card-link" href="https://twitter.com" target="_blank" rel="noopener">
+        <div class="team-card">
+          <img class="photo" src="assets/img/team-yoonyoung.png" alt="Yoonyoung Kim">
+          <div class="info">
+            <span class="name">Yoonyoung Kim</span>
+            <span class="role">UX Research and Visitor Experience Lead</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<script src="assets/js/land-bits.js?v=14"></script>
+<script src="assets/js/dot-globe.js?v=14"></script>
+<script src="assets/js/site.js?v=14"></script>
+<script>
+initDotGlobe(document.getElementById("about-globe"), {
+    sizePct: 58,
+    offsetX: 0,
+    offsetY: 0,
+    rotationPeriod: 46,
+    tilt: 16,
+    dotColor: "rgb(255, 255, 255)",
+    parallax: 0.03,
+    grainOpacity: 0.03,
+    glitch: false,
+    glitchInterval: 4,
+    accentColor: "rgb(87, 104, 255)",
+    mobileLayout: false,
+    showGlow: true,
+    showScrim: false,
+    showGrain: false,
+    markers: [
+        { lat: 39.04, lon: -77.49 }, { lat: 40.08, lon: -82.8 }, { lat: 41.88, lon: -87.63 },
+        { lat: 44.98, lon: -93.27 }, { lat: 41.59, lon: -93.62 }, { lat: 41.26, lon: -95.93 },
+        { lat: 39.1, lon: -94.58 }, { lat: 33.75, lon: -84.39 }, { lat: 32.78, lon: -96.8 },
+        { lat: 33.45, lon: -112.07 }, { lat: 45.6, lon: -121.18 }, { lat: 43.65, lon: -79.38 },
+        { lat: 20.59, lon: -100.39 }, { lat: -23.55, lon: -46.63 }, { lat: -33.45, lon: -70.67 },
+        { lat: 53.35, lon: -6.26 }, { lat: 51.51, lon: -0.13 }, { lat: 52.37, lon: 4.9 },
+        { lat: 50.11, lon: 8.68 }, { lat: 43.3, lon: 5.37 }, { lat: 6.52, lon: 3.38 },
+        { lat: -26.2, lon: 28.05 }, { lat: 19.08, lon: 72.88 }, { lat: 1.35, lon: 103.82 },
+        { lat: -6.21, lon: 106.85 }, { lat: 22.32, lon: 114.17 }, { lat: 37.57, lon: 126.98 },
+        { lat: 35.68, lon: 139.65 }, { lat: -33.87, lon: 151.21 }
+    ]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Code Your Dreams — Cost of a Click</title>
+<meta name="description" content="Code Your Dreams is a nonprofit that provides accessible technology education to young people and adults in underserved communities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gilda+Display&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@100..900&family=Fragment+Mono&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=14">
+</head>
+<body>
+<div class="page cyd">
+
+  <header class="nav">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html" aria-label="The Environment Remembers — home">
+        <img class="nav-mark" src="assets/img/logo-mark.svg?v=14" alt="" width="50" height="50">
+        <span class="nav-wordmark">The<br>Environment<br>Remembers</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="code-your-dream.html" class="is-current">Code Your Dreams</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- 01 hero -->
+  <section class="section cyd-hero">
+    <div class="cyd-hero-inner">
+      <div class="cyd-hero-copy" data-appear="y:0,threshold:0,replay">
+        <h1>Code Your<br>Dreams</h1>
+        <p class="lede">Empowering communities through technology education.</p>
+        <p class="body">Code Your Dreams is a nonprofit organization that provides accessible technology education to young people and adults, helping learners build the skills and confidence to create solutions for challenges in their own communities.</p>
+      </div>
+
+      <div class="cyd-hero-photo" data-appear="y:24,scale:0.96,delay:0.12,threshold:0.2">
+        <img src="assets/img/cyd-portrait.jpg" alt="A Code Your Dreams instructor in the classroom"
+             onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 expanding chapters -->
+  <section class="section cyd-chapters" data-accordion="single">
+
+    <div class="hairline"></div>
+
+    <article class="acc-item" data-appear="y:22,threshold:0.15">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-different">
+        <span class="acc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9.2" cy="8.4" r="3.5"/>
+            <path d="M3.1 19.4a6.1 6.1 0 0 1 12.2 0"/>
+            <path d="M16.1 5.4a3.5 3.5 0 0 1 0 6"/>
+            <path d="M17.6 13.9a6.1 6.1 0 0 1 3.3 5.5"/>
+          </svg>
+        </span>
+        <span class="acc-text">
+          <span class="title">What Makes Us Different</span>
+          <span class="summary">We combine community focus, hands-on learning, and human-centered values to create meaningful impact.</span>
+        </span>
+        <span class="acc-plus" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </span>
+      </button>
+      <div class="acc-body" id="acc-different" aria-hidden="true">
+        <div class="acc-body-inner">
+          <p>Most technology education starts with the technology. Code Your Dreams starts with the neighborhood. Learners are asked what they would change about the place they live, and the programming that follows exists to build that answer, whether that means data science in Python and Jupyter Notebooks, a web application built with Flask and a database, or a mobile tool made in MIT App Inventor. Classes run for young people and adults alike, and they are taught where learners already are, in schools, libraries, and community centers across underserved communities, so taking part never depends on a family already owning the right hardware or living in the right district.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="hairline"></div>
+
+    <article class="acc-item" data-appear="y:22,delay:0.08,threshold:0.15">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-impact">
+        <span class="acc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="13" r="8.4"/>
+            <circle cx="11" cy="13" r="4.9"/>
+            <circle cx="11" cy="13" r="1.4"/>
+            <path d="M14.6 9.4 21 3"/>
+            <path d="M17.3 2.7h4v4"/>
+          </svg>
+        </span>
+        <span class="acc-text">
+          <span class="title">Our Impact</span>
+          <span class="summary">Thousands of learners and communities have been empowered to turn ideas into real change.</span>
+        </span>
+        <span class="acc-plus" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </span>
+      </button>
+      <div class="acc-body" id="acc-impact" aria-hidden="true">
+        <div class="acc-body-inner">
+          <p>So far, Code Your Dreams has taught more than 1,274 classes across 63 communities and counts 6,431 alumni, which matters less as a scoreboard than as a measure of reach: each community is a place where a path into technical work now exists close enough to walk to. The more durable impact shows up after the class ends, because learners leave with a project of their own design rather than a finished tutorial, built around a question their own block was already asking. Some of that work goes on being used locally, but the lasting result is usually a person who now treats problems as something to build against rather than something to live with.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="hairline"></div>
+
+    <article class="acc-item" data-appear="y:22,delay:0.16,threshold:0.15">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="acc-philosophy">
+        <span class="acc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="1.9"/>
+            <ellipse cx="12" cy="12" rx="10.2" ry="4.3"/>
+            <ellipse cx="12" cy="12" rx="10.2" ry="4.3" transform="rotate(60 12 12)"/>
+            <ellipse cx="12" cy="12" rx="10.2" ry="4.3" transform="rotate(120 12 12)"/>
+          </svg>
+        </span>
+        <span class="acc-text">
+          <span class="title">Our Philosophy</span>
+          <span class="summary">We believe technology is a force for good when it is inclusive, transformative, and driven by people.</span>
+        </span>
+        <span class="acc-plus" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </span>
+      </button>
+      <div class="acc-body" id="acc-philosophy" aria-hidden="true">
+        <div class="acc-body-inner">
+          <p>The organization works from an empowerment model rather than a charity one. Its goal is to empower every learner to become a fearless creator of technology that changes the world, and the word carrying the weight there is <em>creator</em>: technology is not handed down to a community by people who understand it better, it is something the community itself is equipped to make, because the knowledge of what needs building already lives with the people who live there. That belief has a practical corollary the team repeats often, which is that students don't just build technology, they also build their communities. Accessibility is the precondition, collaboration is the method, and the transformation being aimed at is not only in what a learner can do, but in who they understand themselves to be allowed to become.</p>
+        </div>
+      </div>
+    </article>
+
+    <div class="hairline"></div>
+
+  </section>
+
+  <!-- 03 closing quote -->
+  <section class="section cyd-quote">
+    <div class="cyd-quote-mark" data-appear="y:16,scale:0.9,threshold:0.4">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M9.6 5.4c-3.4 1.5-5.4 4.3-5.4 7.9v5.3h6.6v-6.4H7.4c0-2 1-3.4 3-4.3zm10 0c-3.4 1.5-5.4 4.3-5.4 7.9v5.3H20.8v-6.4h-3.4c0-2 1-3.4 3-4.3z"/>
+      </svg>
+    </div>
+    <p class="reveal-text cyd-quote-text"
+       data-reveal-text="We empower every learner to become a creator of technology that changes the world."
+       data-reveal-start="0"></p>
+  </section>
+
+</div>
+
+<script src="assets/js/site.js?v=14"></script>
+</body>
+</html>

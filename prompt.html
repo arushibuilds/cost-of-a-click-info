@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type a Prompt — Cost of a Click</title>
+<meta name="description" content="Every prompt leaves a trace. Type a prompt and follow the water, energy and carbon it sets in motion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gilda+Display&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@100..900&family=Fragment+Mono&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=14">
+</head>
+<body class="prompt-page">
+
+<!-- ======================================================================
+     STAGE 1 — ask
+     ====================================================================== -->
+<section class="pr-stage pr-ask is-active" id="stage-ask">
+
+  <div class="pr-map" id="pr-map" aria-hidden="true"></div>
+
+  <header class="nav nav--bare">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html" aria-label="The Environment Remembers — home">
+        <img class="nav-mark" src="assets/img/logo-mark.svg?v=14" alt="" width="50" height="50">
+        <span class="nav-wordmark">The<br>Environment<br>Remembers</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="pr-ask-main">
+    <div class="pr-ask-inner">
+
+      <h1 class="pr-question">What would you ask AI today?</h1>
+      <p class="pr-sub">Every prompt leaves a trace.</p>
+
+      <div class="pr-form-wrap">
+      <form class="pr-form" id="pr-form" autocomplete="off">
+        <label class="pr-field">
+          <span class="sr-only">Your prompt</span>
+          <input class="pr-input" id="pr-input" type="text" maxlength="140"
+                 placeholder="Type your prompt here..." spellcheck="false">
+        </label>
+        <button class="pr-send" type="submit" aria-label="Send your prompt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 12h13.5"/><path d="M12.75 6.75 18 12l-5.25 5.25"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+
+    </div>
+  </main>
+
+
+</section>
+
+<!-- ======================================================================
+     STAGE 2 — follow your prompt
+     ====================================================================== -->
+<section class="pr-stage pr-follow" id="stage-follow" aria-hidden="true">
+  <div class="pr-follow-inner">
+    <div class="pr-follow-copy">
+      <p class="pr-follow-eyebrow">Your prompt has been sent</p>
+      <h2 class="pr-follow-title">Follow your prompt</h2>
+      <p class="pr-follow-lede">Discover the hidden journey<br>behind every AI prompt.</p>
+    </div>
+    <div class="pr-follow-arrow" aria-hidden="true">
+      <svg viewBox="0 0 116 48" fill="none" stroke="currentColor" stroke-width="6"
+           stroke-linecap="round" stroke-linejoin="round">
+        <!-- shaft ends where the head's tip lands, so the round cap and the
+             round join merge into one solid point instead of crossing. -->
+        <path d="M7 24H99"/>
+        <path d="M82 7 99 24 82 41"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
+     STAGE 3 — someone else's cost
+     ====================================================================== -->
+<section class="pr-stage pr-cost" id="stage-cost" aria-hidden="true">
+  <div class="pr-ghosts" id="pr-ghosts" aria-hidden="true"></div>
+  <h2 class="pr-cost-line">Someone else&rsquo;s cost is running.</h2>
+</section>
+
+<script src="assets/js/us-map.js?v=14"></script>
+<script src="assets/js/prompt-flow.js?v=14"></script>
+</body>
+</html>

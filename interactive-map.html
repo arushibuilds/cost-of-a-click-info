@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Map — Cost of a Click</title>
+<meta name="description" content="Explore the hidden infrastructure: six Midwest data-center sites and the water, land, and power they draw on.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gilda+Display&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@100..900&family=Fragment+Mono&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=14">
+</head>
+<body class="imap-page">
+<div class="page">
+
+  <header class="nav">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html" aria-label="The Environment Remembers — home">
+        <img class="nav-mark" src="assets/img/logo-mark.svg?v=14" alt="" width="50" height="50">
+        <span class="nav-wordmark">The<br>Environment<br>Remembers</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="code-your-dream.html">Code Your Dreams</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-burger" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="imap-hero">
+    <div class="bg"></div>
+    <div class="container">
+      <div class="content">
+        <div class="top" data-appear="scale:0.9,threshold:0">
+          <h1>Explore the Hidden<br>Infrastructure</h1>
+          <div class="bottom"></div>
+          <span class="tag" data-appear="y:96,threshold:0">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M 0 0 L 0 0.75" transform="translate(9 1.5)"/>
+            <path d="M 0 0 L 0.75 0" transform="translate(1.5 9)"/>
+            <path d="M 0 1.5 L 0.75 0" transform="translate(12 1.5)"/>
+            <path d="M 1.5 0 L 0 0.75" transform="translate(1.5 12)"/>
+            <path d="M 11.462 9.215 C 11.286 9.04 11.209 8.789 11.255 8.545 C 11.301 8.301 11.465 8.095 11.693 7.996 L 16.044 6.326 C 16.324 6.199 16.497 5.914 16.483 5.607 C 16.468 5.3 16.268 5.033 15.977 4.934 L 0.971 0.033 C 0.705 -0.049 0.416 0.023 0.22 0.22 C 0.023 0.416 -0.049 0.705 0.033 0.971 L 4.931 15.98 C 5.031 16.271 5.297 16.471 5.604 16.486 C 5.911 16.5 6.196 16.326 6.323 16.047 L 7.994 11.696 C 8.093 11.468 8.298 11.304 8.542 11.258 C 8.786 11.212 9.037 11.289 9.212 11.465 L 14.023 16.275 C 14.315 16.568 14.79 16.568 15.083 16.275 L 16.273 15.089 C 16.565 14.796 16.565 14.321 16.273 14.028 Z" transform="translate(3.758 3.755)"/>
+          </svg>
+          Click a point to explore
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="imap-stage-wrap">
+    <main class="imap-stage">
+      <div id="imap" style="width:100%;height:100%"></div>
+    </main>
+  </div>
+
+
+</div>
+
+<script src="assets/js/state-paths.js?v=14"></script>
+<script src="assets/js/midwest-site-map.js?v=14"></script>
+<script src="assets/js/site.js?v=14"></script>
+<script>
+initMidwestSiteMap(document.getElementById("imap"), {
+    background: "#000000",
+    mapFill: "#080808",
+    strokeColor: "#ffffff",
+    labelColor: "#5c5c5c",
+    markerColor: "#ffffff",
+    panelBackground: "#0b0b0b",
+    panelTextColor: "#d9d9d9",
+    zoomLevel: 1.55,
+    enableZoom: true,
+    showStates: true,
+    showHint: true,
+    hintText: "Select a site",
+    captionText: "Six sites · Midwest",
+    titleFont: { fontFamily: "Inter, sans-serif", fontWeight: "600", fontSize: "30px", letterSpacing: "-0.015em", lineHeight: "1.2" },
+    bodyFont: { fontFamily: "Inter, sans-serif", fontWeight: "400", fontSize: "15px", letterSpacing: "0.005em", lineHeight: "1.7" },
+    labelFont: { fontFamily: "'Fragment Mono', ui-monospace, monospace", fontWeight: "400", fontSize: "11px", letterSpacing: "0.18em", lineHeight: "1.2", textTransform: "uppercase" }
+});
+</script>
+</body>
+</html>
