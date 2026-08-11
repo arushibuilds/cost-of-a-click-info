@@ -983,7 +983,7 @@ body.home .page {
     flex-direction: column;
     gap: 4px;
     width: 100%;
-    height: 90px;
+    min-height: 90px;
     padding: 16px 20px 20px;
 }
 
@@ -1004,6 +1004,25 @@ body.home .page {
     letter-spacing: -0.02em;
     color: rgba(232, 220, 200, 0.6);
 }
+
+.team-card .linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 10px;
+    font-family: var(--instrument);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5em;
+    letter-spacing: -0.02em;
+    color: rgba(232, 220, 200, 0.75);
+    transition: color 300ms cubic-bezier(0.44, 0, 0.56, 1);
+}
+
+.team-card .linkedin svg { width: 13px; height: 13px; flex: none; }
+
+.team-card-link:hover .linkedin { color: var(--accent); }
 
 /* ==========================================================================
    RESEARCH  (/research)

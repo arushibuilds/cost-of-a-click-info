@@ -188,9 +188,9 @@
             <div data-ascii="water" data-width="199" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"></div>
           </div>
           <p class="stat-figure">
-            <span class="count" data-count-to="10" data-count-scramble>0</span><span class="count-sep">–</span><span class="count" data-count-to="50" data-count-scramble>0</span><span class="count-unit">mL</span>
+            <span class="count" data-count-to="16.9" data-count-decimals="1" data-count-scramble>0</span><span class="count-unit">mL<sup class="count-star">*</sup></span>
           </p>
-          <p class="stat-lede">per medium AI interaction</p>
+          <p class="stat-lede">US average, per medium AI interaction</p>
           <p class="stat-desc">Water is used in data centers to cool servers and remove heat. The amount varies by location, climate and cooling technology.</p>
         </div>
 
@@ -200,9 +200,9 @@
             <div data-ascii="electricity" data-width="200" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)"></div>
           </div>
           <p class="stat-figure">
-            <span class="count" data-count-to="4" data-count-scramble>0</span><span class="count-sep">–</span><span class="count" data-count-to="16" data-count-scramble>0</span><span class="count-unit">Wh</span>
+            <span class="count" data-count-to="4" data-count-scramble>0</span><span class="count-unit">Wh<sup class="count-star">*</sup></span>
           </p>
-          <p class="stat-lede">varies by model &amp; hardware</p>
+          <p class="stat-lede">per medium AI interaction</p>
           <p class="stat-desc">More computation means more energy. Model size, response length, and hardware efficiency all affect electricity use.</p>
         </div>
 
@@ -219,7 +219,7 @@
         </div>
       </div>
 
-      <p class="stats-footnote">* One published estimate (NIAIS Brief). Actual impact depends on location and energy mix.</p>
+      <p class="stats-footnote">* Water and electricity estimates from Li et al. (2023); carbon from Patterson et al. (2021), via NIAIS Brief. Actual impact depends on location and energy mix.</p>
 
       <div class="stats-disclaimer">
         <span class="stats-disclaimer-icon" aria-hidden="true">
@@ -230,6 +230,61 @@
           </svg>
         </span>
         <p>Illustrative estimates based on published studies. Actual impact varies by model, prompt and response length, hardware, data-center location, cooling system, and electricity mix.</p>
+      </div>
+
+      <div class="dot-pattern"></div>
+    </div>
+  </div>
+
+  <div class="hairline thick"></div>
+
+  <div class="resources-outer">
+    <div class="resources">
+      <div class="resources-top">
+        <div class="art"></div>
+        <span class="badge" data-appear="threshold:0,replay"><span class="badge-dot"><i><b></b></i></span>US Data Behind the Numbers</span>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-top"><h3>Training Cost</h3></div>
+          <p class="stat-figure">
+            <span class="count" data-count-to="700000" data-count-scramble>0</span><span class="count-unit">L</span>
+          </p>
+          <p class="stat-lede">the biggest cost already happened</p>
+          <p class="stat-desc">On-site freshwater for GPT-3 (175B) training. 5.4 million litres total across US data centers. A medium request today is the equivalent of 10–50 requests per 500 mL bottle of water, depending on location. (US grid average: 3.14 L consumed, 43.8 L withdrawn, per kWh — WRI.)</p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-top"><h3>By Location</h3></div>
+          <p class="stat-figure">
+            <span class="count" data-count-to="10.6" data-count-decimals="1" data-count-scramble>0</span><span class="count-sep">–</span><span class="count" data-count-to="47.5" data-count-decimals="1" data-count-scramble>0</span><span class="count-unit">mL</span>
+          </p>
+          <p class="stat-lede">same request, different states</p>
+          <p class="stat-desc">US average 16.9 mL. Illinois 15.0 mL. Georgia 10.6 mL. Arizona 29.9 mL. Washington 47.5 mL. Water intensity varies with local electricity grid mix and data center cooling design.</p>
+        </div>
+
+        <div class="stat">
+          <div class="stat-top"><h3>At Scale</h3></div>
+          <p class="stat-figure">
+            <span class="count" data-count-to="176" data-count-scramble>0</span><span class="count-unit">TWh</span>
+          </p>
+          <p class="stat-lede">and growing fast</p>
+          <p class="stat-desc">US data-center electricity use in 2023 (4.4% of national total). Up from 76 TWh (1.9%) in 2018, projected to reach 325–580 TWh (6.7–12.0%) by 2028. Direct water consumption more than tripled, from 21.2 to 66 billion litres, between 2014 and 2023 — 84% of it now at hyperscale and colocation facilities.</p>
+        </div>
+      </div>
+
+      <p class="stats-footnote">Sources: Li et al. (2023); Shehabi et al. (2024, LBNL).</p>
+
+      <div class="stats-disclaimer">
+        <span class="stats-disclaimer-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 11v6" stroke-linecap="round"></path>
+            <circle cx="12" cy="7.6" r="0.9" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </span>
+        <p>For comparison: one AI query (~4.3 g CO2) sits above a minute of web browsing (0.1–0.2 g) or an email (0.02–0.17 g), close to a minute of streaming video (0.6–1.7 g), and far below driving one mile (~404 g) or a 10-minute hot shower (~2,000 g). (NIAIS brief.)</p>
       </div>
 
       <div class="dot-pattern"></div>
@@ -252,7 +307,7 @@
             <div class="paper-body">
               <span class="paper-index">01</span>
               <h3>The Hidden Water Footprint of AI Models</h3>
-              <p class="paper-authors">Li, Bashir &amp; Ren (2025)</p>
+              <p class="paper-authors">Li et al. (2023)</p>
               <p class="paper-venue">Environmental Science &amp; Technology</p>
               <p class="paper-desc">Quantifies the freshwater consumed by AI models during training and inference, focusing on cooling in data centers.</p>
               <span class="paper-cta">View Study <span class="paper-arrow" aria-hidden="true">&#8594;</span></span>
