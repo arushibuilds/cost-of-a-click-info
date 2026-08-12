@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gilda+Display&family=Instrument+Sans:wght@400..700&family=Geist+Mono:wght@100..900&family=Fragment+Mono&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=14">
+<link rel="stylesheet" href="assets/css/site.css?v=16">
 </head>
 <body class="contact-page">
 <div class="page">
@@ -17,7 +17,7 @@
   <header class="nav">
     <div class="nav-container">
       <a class="nav-logo" href="index.html" aria-label="The Environment Remembers — home">
-        <img class="nav-mark" src="assets/img/logo-mark.svg?v=14" alt="" width="50" height="50">
+        <img class="nav-mark" src="assets/img/logo-mark.svg?v=16" alt="" width="50" height="50">
         <span class="nav-wordmark">The<br>Environment<br>Remembers</span>
       </a>
       <nav class="nav-links">
@@ -34,23 +34,42 @@
   <section class="reach">
     <div class="reach-copy">
       <header class="contact-hero">
-        <h1>Code your dreams.<br>We’d love to hear from you.</h1>
-        <p class="sub">We are excited to connect with YOU! Whether you have <br>questions, want to learn more about our programs, <br>or are ready to get involved, we are here to help.</p>
-      </header>
+        <h1>Four students<br>built this.</h1>
+        <p class="sub">The Environment Remembers was researched, designed, and <br>fabricated by a team of students at DePaul University. <br>Every part of it - the map, the water, the receipt<br> was made by students learning about AI and its environmental impact.</p>
+      </header>    
+
+      <div class="reach-block">
+        <h2>The people behind it</h2>
+        <ul class="maker-list">
+          <li><span class="maker-name">Sameed Iqbal</span><span class="maker-role">Research and Community Content Lead</span></li>
+          <li><span class="maker-name">Arushi Malhotra</span><span class="maker-role">Technical Lead</span></li>
+          <li><span class="maker-name">Seeza Wasim</span><span class="maker-role">Design and Fabrication Lead</span></li>
+          <li><span class="maker-name">Yoonyoung Kim</span><span class="maker-role">UX Research and Visitor Experience Lead</span></li>
+        </ul>
+        <p><a class="reach-link" href="about.html#team">Meet the team on the About page &rarr;</a></p>
+      </div>
 
       <div class="reach-block">
         <h2>Reach out to us!</h2>
-        <p>Have a question or something you’d like to share? Send us a message <br>anytime. Whether it’s feedback, a new idea, or simply a friendly <br>hello, we’d love to hear from you and continue the conversation.</p>
+        <p>Questions about how the installation works, the research behind the <br>numbers, or bringing it to your space? Messages go straight to <br>our team.</p>
       </div>
 
       <div class="reach-block">
-        <h2>Volunteer with us!</h2>
-        <p>Passionate about technology, sustainability, or community <br>engagement? We’d love to collaborate with people who want to make <br>a positive impact through creative projects, research, and education.</p>
+        <h2>Volunteer with Code Your Dreams!</h2>
+        <p>This project exists because of <strong>Code Your Dreams</strong>, our industry <br>mentor — a nonprofit founded by Brianne Caplan that teaches <br>accessible technology skills to young people and adults in <br>underserved communities. They are always looking for people to <br>teach, mentor, or help out.</p>
+        <div class="reach-links">
+          <a class="reach-link" href="https://codeyourdreams.org/get-involved#volunteer" target="_blank" rel="noopener">Volunteer with Code Your Dreams &rarr;</a>
+          <a class="reach-link" href="https://codeyourdreams.org/donate" target="_blank" rel="noopener">Donate to their programs &rarr;</a>
+          <a class="reach-link" href="code-your-dream.html">Read more about their work &rarr;</a>
+        </div>
       </div>
     </div>
 
-    <form class="form-card" onsubmit="return false;">
-      <h2>Let’s talk!</h2>
+    <form class="form-card" data-mailto="amalhot5@depaul.edu"
+          action="mailto:amalhot5@depaul.edu" method="post" enctype="text/plain">
+      <h2>Share your thoughts</h2>
+      <p class="form-note">Tell us what the installation made you think about — a question, a
+        correction, an idea.</p>
 
       <div class="field-row">
         <label class="field">
@@ -68,12 +87,14 @@
         <textarea name="message" placeholder="Message"></textarea>
       </label>
 
-      <button class="form-submit" type="submit">Submit</button>
+      <button class="form-submit" type="submit">Share your thoughts</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+     
     </form>
   </section>
 
 </div>
 
-<script src="assets/js/site.js?v=14"></script>
+<script src="assets/js/site.js?v=16"></script>
 </body>
 </html>

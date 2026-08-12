@@ -570,8 +570,9 @@ body.home .page {
 }
 
 .panel-1 { background: radial-gradient(90% 70% at 50% 42%, rgb(26, 29, 38) 0%, rgb(10, 12, 19) 72%); }
-.panel-2 { background: rgb(7, 9, 15); }
-.panel-3 { background: radial-gradient(80% 60% at 50% 45%, rgb(25, 28, 37) 0%, rgb(8, 10, 17) 72%); }
+.panel-2 { background: radial-gradient(75% 55% at 50% 78%, rgb(15, 20, 33) 0%, rgb(6, 8, 14) 74%); }
+.panel-3 { background: rgb(7, 9, 15); }
+.panel-4 { background: radial-gradient(80% 60% at 50% 45%, rgb(25, 28, 37) 0%, rgb(8, 10, 17) 72%); }
 
 .panel .label {
     width: 100%;
@@ -634,6 +635,107 @@ body.home .page {
 }
 
 .screen .input svg { width: 11px; height: 11px; color: rgba(255, 255, 255, 0.55); }
+
+/* step 2 — projector throwing the routed data centre onto the map */
+.projection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 6px;
+}
+
+.projection .projector {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 38px;
+    height: 14px;
+    padding-bottom: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 3px 3px 2px 2px;
+    background: linear-gradient(180deg, rgb(24, 28, 40) 0%, rgb(13, 16, 25) 100%);
+}
+
+.projection .projector .lens {
+    width: 6px;
+    height: 3px;
+    border-radius: 2px;
+    background: rgb(150, 195, 255);
+    box-shadow: 0 0 6px rgba(140, 190, 255, 0.85);
+}
+
+.projection .beam {
+    width: 74%;
+    flex: 0 0 40px;
+    margin-top: -1px;
+    clip-path: polygon(43% 0, 57% 0, 100% 100%, 0 100%);
+    background: linear-gradient(180deg,
+        rgba(150, 195, 255, 0.30) 0%,
+        rgba(140, 190, 255, 0.10) 55%,
+        rgba(140, 190, 255, 0.03) 100%);
+}
+
+.projection .map-plate {
+    position: relative;
+    width: 88%;
+    margin-top: -8px;
+    padding: 9px 8px 7px;
+    border: 1px solid rgba(150, 190, 255, 0.18);
+    border-radius: 4px;
+    background: linear-gradient(180deg,
+        rgba(120, 165, 235, 0.10) 0%,
+        rgba(40, 70, 130, 0.05) 100%);
+}
+
+/* US outline (albers projection), generated from US Census nation geometry */
+.projection .us-map { display: block; width: 100%; height: auto; }
+
+.projection .us-shape {
+    stroke: rgba(175, 212, 255, 0.82);
+    stroke-width: 2.2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.projection .node { fill: rgba(150, 195, 255, 0.42); }
+
+.projection .pin-dot {
+    fill: rgb(195, 222, 255);
+    filter: drop-shadow(0 0 4px rgba(150, 195, 255, 0.95));
+}
+
+.projection .pin-ring {
+    fill: none;
+    stroke: rgba(150, 195, 255, 0.55);
+    stroke-width: 1.6;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pin-pulse 2.6s ease-out infinite;
+}
+
+@keyframes pin-pulse {
+    0%   { transform: scale(0.3); opacity: 0.9; }
+    70%  { transform: scale(1); opacity: 0; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+.projection .map-tag {
+    display: block;
+    margin-top: 6px;
+    text-align: center;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1.4em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(180, 210, 255, 0.72);
+}
 
 .cylinder {
     display: flex;
@@ -711,24 +813,6 @@ body.home .page {
     letter-spacing: 0.01em;
     color: rgb(91, 96, 104);
 }
-
-.play {
-    position: absolute;
-    left: 238px;
-    top: 106px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    background: rgba(12, 15, 24, 0.42);
-    cursor: pointer;
-}
-
-.play svg { width: 17px; height: 17px; color: var(--white); }
 
 /* -- 04 Closing statement -------------------------------------------------- */
 .closing { padding: 149px 40px; }
@@ -1740,9 +1824,10 @@ body.home .page {
     flex: 1 1 0;
     min-width: 0;
     max-width: 442px;
+    margin: 0;
     aspect-ratio: 442 / 616;
     border-radius: 14px;
-    /* stands in for the portrait until assets/img/cyd-portrait.jpg is dropped in */
+    /* shows through while the portrait loads */
     background: linear-gradient(160deg, rgb(32, 34, 44) 0%, rgb(17, 18, 24) 62%, rgb(11, 12, 16) 100%);
     overflow: hidden;
 }
@@ -1752,6 +1837,40 @@ body.home .page {
     height: 100%;
     object-fit: cover;
     object-position: center 22%;
+}
+
+.cyd-hero-photo figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 56px 22px 20px;
+    background: linear-gradient(180deg,
+        rgba(9, 10, 13, 0) 0%,
+        rgba(9, 10, 13, 0.72) 55%,
+        rgba(9, 10, 13, 0.92) 100%);
+}
+
+.cyd-hero-photo figcaption .name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.3em;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+
+.cyd-hero-photo figcaption .role {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.66);
 }
 
 /* -- 02 expanding chapters ------------------------------------------------- */
@@ -1989,6 +2108,64 @@ body.home .page {
     color: var(--gray);
 }
 
+.maker-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin: -4px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.maker-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: 16px;
+    border-left: 1px solid var(--border);
+}
+
+.maker-list .maker-name {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4em;
+    letter-spacing: -0.01em;
+    color: var(--white-90);
+}
+
+.maker-list .maker-role {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: -0.01em;
+    color: var(--gray);
+}
+
+.reach-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.reach-link {
+    display: inline-block;
+    padding: 3px 0;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5em;
+    letter-spacing: -0.01em;
+    color: var(--white-90);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.reach-link:hover { color: var(--white); border-bottom-color: var(--white-30); }
+
 .form-card {
     display: flex;
     flex-direction: column;
@@ -2084,6 +2261,41 @@ body.home .page {
 }
 
 .form-submit:hover { background: rgb(80, 163, 248); }
+
+.form-note {
+    width: 100%;
+    margin-top: -10px;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6em;
+    letter-spacing: -0.01em;
+    color: var(--gray);
+}
+
+.form-status {
+    width: 100%;
+    margin-top: -12px;
+    min-height: 1.5em;
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.5em;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.form-status.is-error { color: rgb(255, 150, 140); }
+
+.form-fallback {
+    width: 100%;
+    margin-top: -14px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.6em;
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.form-fallback a { color: rgba(255, 255, 255, 0.72); border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
+.form-fallback a:hover { color: var(--white); }
 
 /* the hard line breaks in the contact copy only hold at the design width;
    below it the text wraps on its own (each <br> is preceded by a space so
@@ -2242,6 +2454,7 @@ body.home .page {
 
 @media (prefers-reduced-motion: reduce) {
     [data-appear] { opacity: 1; transform: none !important; transition: none; }
+    .projection .pin-ring { animation: none; opacity: 0.5; transform: none; }
 }
 
 /* ==========================================================================
@@ -2330,7 +2543,6 @@ body.home .page {
     .installation-inner .about-copy h2 { font-size: 32px; }
     .about-copy .body { font-size: 16px; }
     .panels { flex-direction: column; }
-    .play { left: 50%; top: 106px; transform: translateX(-50%); }
     .closing-statement h2 { font-size: 28px; }
     .places { padding: 96px 24px 64px; }
     .places-text h1 { font-size: 32px; }

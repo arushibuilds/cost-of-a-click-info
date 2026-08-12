@@ -354,6 +354,56 @@
         });
     }
 
+    /* ---- contact form (contact) ------------------------------------------- */
+    // No backend: the form hands the message to the visitor's mail client with
+    // everything already filled in. The plain action="mailto:" on the form is
+    // the no-JS fallback; this builds a tidier subject and body.
+    function initContactForm() {
+        var forms = document.querySelectorAll("form[data-mailto]");
+        if (!forms.length) return;
+
+        Array.prototype.forEach.call(forms, function (form) {
+            var status = form.querySelector(".form-status");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                var to = form.getAttribute("data-mailto");
+                var name = (form.querySelector("[name=name]") || {}).value || "";
+                var email = (form.querySelector("[name=email]") || {}).value || "";
+                var message = (form.querySelector("[name=message]") || {}).value || "";
+
+                if (!message.trim()) {
+                    if (status) {
+                        status.textContent = "Add a message first, then we can send it.";
+                        status.classList.add("is-error");
+                    }
+                    var box = form.querySelector("[name=message]");
+                    if (box) box.focus();
+                    return;
+                }
+
+                var body = message.trim();
+                if (name.trim() || email.trim()) {
+                    body += "\n\n—\n" + name.trim() + (email.trim() ? " (" + email.trim() + ")" : "");
+                }
+
+                var subject = name.trim()
+                    ? "The Environment Remembers — a note from " + name.trim()
+                    : "The Environment Remembers — a note from the website";
+
+                if (status) {
+                    status.classList.remove("is-error");
+                    status.textContent = "Opening your email app, addressed to " + to + ".";
+                }
+
+                window.location.href = "mailto:" + to +
+                    "?subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(body);
+            });
+        });
+    }
+
     function boot() {
         initNav();
         initStarfield();
@@ -362,6 +412,7 @@
         initTimeline();
         initRevealText();
         initAccordion();
+        initContactForm();
     }
 
     if (document.readyState === "loading") {
