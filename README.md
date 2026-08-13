@@ -53,11 +53,55 @@ Fragment Mono) come from Google Fonts; Pretendard Variable from jsDelivr.
 
 ## Running it
 
-Any static server works:
+There is nothing to install and nothing to build. You only need Python, which
+most computers already have.
+
+### Windows
+
+1. Open the Start menu, type `powershell`, press Enter. A blue window opens.
+2. Copy the two lines below and paste them into that window (right-click pastes),
+   then press Enter:
+
+```powershell
+cd "c:\Users\Arushi's-pc\Projects\coac-info\cost-of-a-click"
+python -m http.server 5177
+```
+
+3. It will print `Serving HTTP on :: port 5177 ...`. Leave the window open.
+4. Open your browser and go to **http://localhost:5177/**
+
+To stop the site, click the PowerShell window and press `Ctrl` + `C`, or just
+close the window.
+
+### macOS / Linux
+
+Same idea, in Terminal — replace the path with wherever the folder lives:
 
 ```bash
-python3 -m http.server 5177 --directory /Users/yoon/impactgrant
+cd ~/path/to/cost-of-a-click
+python3 -m http.server 5177
 ```
+
+Then open **http://localhost:5177/**
+
+### Troubleshooting
+
+- **"python is not recognized"** — Python isn't installed. Get it from
+  [python.org/downloads](https://www.python.org/downloads/) and tick
+  *"Add python.exe to PATH"* during setup. On macOS use `python3`.
+- **"Address already in use"** — something is already on port 5177. Change both
+  the command and the URL to another number, e.g. `5178`.
+- **The page loads but looks wrong** — the fonts come from Google Fonts and
+  jsDelivr, so you need an internet connection for the type to render correctly.
+- **Numbers show as 0** — the statistics are animated counters that fill in when
+  you scroll them into view. Scroll down to the section rather than expecting
+  them on load.
+
+### Without a server
+
+Double-clicking `index.html` also works — no page uses `fetch` or ES modules, so
+opening it straight from the file system won't break anything. The local server
+is just closer to how it behaves when published.
 
 ## Responsive
 

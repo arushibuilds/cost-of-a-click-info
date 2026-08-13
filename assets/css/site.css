@@ -2181,6 +2181,25 @@ body.home .page {
     overflow: clip;
 }
 
+/* the submit control is an <a> to the Google Form, styled as the button */
+.form-submit-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.form-fallback {
+    width: 100%;
+    margin-top: -14px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.5em;
+    text-align: center;
+    color: var(--gray);
+}
+
 .form-card h2 {
     width: 100%;
     font-family: var(--sans);
@@ -3156,4 +3175,173 @@ body.home .page {
     .pr-glint,
     .pr-ghost { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
     .pr-follow.is-active .pr-follow-arrow { animation: pr-arrow-in 300ms ease forwards; }
+}
+
+/* ==========================================================================
+   PHONE LAYER
+   The 1100px and 860px blocks above already reflow the desktop canvas down to
+   tablet width — this layer takes it the rest of the way to 320-480px.
+   It lives at the end of the file so it also wins over the prompt-page rules,
+   which are defined after the other responsive blocks. Nothing here fires
+   above 860px, so the desktop design is untouched.
+   ========================================================================== */
+
+/* ---- touch targets (phone + tablet, where there is no cursor) ------------- */
+@media (max-width: 860px) {
+    /* 20px of visual bars inside a 44px hit area; negative margin keeps the
+       icon optically where it already sits against the container edge */
+    .nav-burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-right: -12px;
+        touch-action: manipulation;
+    }
+
+    .nav-logo { min-height: 44px; }
+
+    /* open menu: full-width 44px rows, gap trimmed so the panel keeps its height */
+    .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        width: 100%;
+    }
+    .nav-links { gap: 6px; }
+
+    /* the underline is the design, so the hit area is grown with a pseudo
+       element instead of padding, which would push the rule away from the text */
+    .reach-link { position: relative; }
+    .reach-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 44px;
+        transform: translateY(-50%);
+    }
+
+    .pr-input { min-height: 44px; }
+    .pr-send { width: 48px; height: 48px; }
+
+    /* Map controls are injected by the map scripts and carry an inline
+       scale(0.9), so 44px would land at 39.6px once transformed. 50px keeps
+       the touched box at 45px. */
+    #imap button,
+    #map button { min-width: 50px; min-height: 50px; }
+}
+
+/* ---- map panning on touch ------------------------------------------------ */
+/* The map drags with pointer events. On the embedded map the page must still
+   scroll vertically, so only horizontal gestures go to the map; the dedicated
+   full-screen map page takes the whole gesture. */
+@media (max-width: 860px) {
+    .imap-stage-wrap,
+    .imap-stage,
+    #imap { touch-action: pan-y; }
+
+    body.map-page #map,
+    #map { touch-action: none; }
+}
+
+/* ---- "Real places" map: scale the whole design box instead of cropping it -- */
+/* The map layers are absolutely positioned against a 675.52 x 643.15 box and
+   the state labels sit at fixed offsets inside it, so a fluid box just crops
+   the middle out. Zooming the box keeps every layer and label in register;
+   the label size is stepped back up so it lands near its 8px design size. */
+@media (max-width: 560px) {
+    .places-map {
+        width: 675.52px;
+        height: 643.15px;
+        max-width: none;
+        aspect-ratio: auto;
+        zoom: 0.58;
+    }
+    .places-map .state-name { font-size: 14px; }
+}
+
+@media (max-width: 440px) {
+    .places-map { zoom: 0.49; }
+    .places-map .state-name { font-size: 16px; }
+}
+
+@media (max-width: 380px) {
+    .places-map { zoom: 0.40; }
+    .places-map .state-name { font-size: 20px; }
+}
+
+/* ---- phone ---------------------------------------------------------------- */
+@media (max-width: 480px) {
+    /* gutters: 24px -> 18px, keeping the vertical rhythm the 860 layer set */
+    .about-hero, .installation, .closing, .how, .supporters,
+    .places, .resources, .papers, .reach, .research-agenda,
+    .cyd-hero, .cyd-quote, .team {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .cyd-chapters { padding-left: 18px; padding-right: 18px; }
+    .timeline-wrap { padding-left: 16px; padding-right: 16px; }
+    .home-hero-content { padding: 52px 18px 104px; }
+
+    /* type: one step down from the tablet sizes, same weights and tracking */
+    .home-title { font-size: 34px; letter-spacing: -1.2px; }
+    .about-copy h1, .about-copy h2,
+    .installation-inner .about-copy h2 { font-size: 26px; }
+    .closing-statement h2 { font-size: 23px; }
+    .team-heading .a, .team-heading .b { font-size: 28px; line-height: 36px; }
+    .places-text h1 { font-size: 26px; }
+    .places-text h3 { font-size: 16px; }
+    .research-agenda h1 { font-size: 26px; }
+    .papers-head h2 { font-size: 26px; letter-spacing: -0.8px; }
+    .contact-hero h1 { font-size: 26px; }
+    .cyd-hero-copy h1 { font-size: 28px; }
+    .reach-block h2 { font-size: 22px; }
+    .supporters h2 { font-size: 19px; }
+    .timeline-text h5 { font-size: 18px; }
+    .acc-text .title { font-size: 17px; }
+    .reveal-text { font-size: 16px; line-height: 22px; }
+    .reveal-text.cyd-quote-text { font-size: 19px; }
+
+    /* stat counters: the tablet size is wider than a phone column */
+    .stat .count, .stat .count-sep { font-size: 44px; line-height: 58px; letter-spacing: -2px; }
+    .stat .count-unit { font-size: 19px; }
+    .stats { gap: 44px; }
+
+    /* the stat and timeline art carry fixed inline widths from the canvas */
+    .stat-art { width: 100% !important; }
+    .timeline-art { max-width: 100%; }
+
+    .stats-disclaimer { padding: 14px 16px; }
+    .stats-footnote { font-size: 11px; }
+
+    .paper-body { padding: 20px 4px 16px; }
+    .paper-body h3 { font-size: 19px; }
+
+    .form-card { padding: 18px; gap: 18px; }
+    .form-card h2 { font-size: 20px; }
+
+    .supporter-logo { height: 44px; padding: 6px 12px; }
+    .supporter-logos { gap: 16px; }
+
+    .flow { gap: 18px; }
+    .flow-step { flex: 1 1 100%; }
+
+    /* interactive map: min-height was taller than the wrapper, so the stage
+       was being clipped rather than fitted */
+    .imap-hero h1 { font-size: 25px; }
+    .imap-hero .container { padding: 104px 18px 32px; }
+    .imap-stage-wrap { height: 420px; }
+    .imap-stage { min-height: 0; height: 100%; }
+    .imap-page { padding-bottom: 64px; }
+
+    /* prompt page */
+    .pr-form { height: 58px; padding: 0 6px 0 20px; margin-top: 28px; }
+    .pr-input { font-size: 16px; }
+    .pr-ghost { max-width: 88vw; font-size: 15px; }
+    .pr-steps { gap: 24px 16px; }
+    .pr-step { width: 46%; }
 }
