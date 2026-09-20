@@ -1108,6 +1108,42 @@ body.home .page {
 
 .team-card-link:hover .linkedin { color: var(--accent); }
 
+.team-legacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1080px;
+    padding-top: 56px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.team-legacy-note {
+    margin: 0;
+    max-width: 640px;
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7em;
+    letter-spacing: -0.01em;
+    color: rgba(232, 220, 200, 0.7);
+    text-align: center;
+}
+
+.team-legacy-note em {
+    font-style: italic;
+    color: var(--white);
+}
+
+.team-legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 660px;
+}
+
 /* ==========================================================================
    RESEARCH  (/research)
    ========================================================================== */
@@ -2569,6 +2605,8 @@ body.home .page {
     .team-heading { flex-direction: column; }
     .team-heading .a, .team-heading .b { font-size: 36px; line-height: 44px; letter-spacing: -1px; }
     .team-grid { grid-template-columns: minmax(0, 1fr); }
+    .team-legacy-grid { grid-template-columns: minmax(0, 1fr); max-width: 320px; }
+    .team-legacy-grid .team-card { grid-column: 1 !important; }
     .reveal-text { font-size: 18px; line-height: 24px; max-width: 100%; }
 
     .cyd-hero { padding: 60px 24px 72px; }
