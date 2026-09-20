@@ -741,8 +741,8 @@ body.home .page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 44%;
     height: 78%;
+    aspect-ratio: 2 / 7;
     padding-top: 20px;
     border: 1px solid rgba(150, 190, 255, 0.22);
     border-radius: 46px 46px 6px 6px;
@@ -1821,11 +1821,17 @@ body.home .page {
     padding-top: 34px;
 }
 
+.cyd-hero-logo {
+    display: block;
+    height: 44px;
+    width: auto;
+}
+
 .cyd-hero-copy h1 {
     width: 100%;
     font-family: var(--sans);
     font-weight: 700;
-    font-size: clamp(44px, 5.7vw, 80px);
+    font-size: clamp(40px, 5.7vw, 80px);
     line-height: 1.03em;
     letter-spacing: -0.035em;
     color: var(--white);
@@ -2610,6 +2616,7 @@ body.home .page {
     .reveal-text { font-size: 18px; line-height: 24px; max-width: 100%; }
 
     .cyd-hero { padding: 60px 24px 72px; }
+    .cyd-hero-logo { height: 26px; }
     .cyd-hero-copy h1 { font-size: 36px; letter-spacing: -0.03em; }
     .cyd-hero-copy .lede { font-size: 19px; }
     .cyd-hero-copy .body { font-size: 15px; line-height: 1.9em; }

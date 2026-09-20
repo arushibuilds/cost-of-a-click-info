@@ -11,15 +11,14 @@ screenshot.
 
 | File | Framer page |
 |---|---|
-| `index.html` | `/` — hero + dot-matrix globe |
-| `about.html` | `/about` |
+| `index.html` | `/` — the about content, now serving as the home page |
 | `research.html` | `/research` |
 | `code-your-dream.html` | `/code-your-dream` (nav only — the canvas is empty) |
 | `contact.html` | `/contact` |
 | `interactive-map.html` | `/interactive-map` |
 | `map.html` | `/map` — full-viewport map stage |
 
-Navigation: About → **Explore the Map** → `interactive-map.html`.
+Navigation: Home → **Explore the Map** → `interactive-map.html`.
 `interactive-map.html` also links down to the full-screen `map.html`.
 
 ## Code components
