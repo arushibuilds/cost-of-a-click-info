@@ -47,6 +47,16 @@ pair of `<pre>` layers.
 by the map cards, downloaded so the site runs without those CDNs.
 `us-outline.svg` is the state-border shape exported straight from the canvas.
 
+The two Cost of a Click 2.0 map cards added later carry their own credits:
+
+- `site-newcarlisle.jpg` — AWS press photo of the Project Rainier campus
+  (New Carlisle, IN), from Amazon's newsroom
+  (`aboutamazon.com/news/aws/aws-project-rainier-ai-trainium-chips-compute-cluster`).
+  Amazon-owned image, reproduced for editorial use; credit Amazon if published.
+- `site-grandrapids.jpg` — the Steelcase Pyramid, now Switch's Michigan campus.
+  Public domain, from Wikipedia (`File:Steelcase Pyramid 2008.png`, uploader
+  Trance88), cropped to 16:9.
+
 Web fonts (Inter, Playfair Display, Gilda Display, Instrument Sans, Geist Mono,
 Fragment Mono) come from Google Fonts; Pretendard Variable from jsDelivr.
 

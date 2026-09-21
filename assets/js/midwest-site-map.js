@@ -31,20 +31,6 @@
 
     var SITES = [
         {
-            id: "altoona",
-            city: "Altoona",
-            region: "Iowa",
-            abbr: "IA",
-            operator: "Meta — Polk County",
-            why: "Meta's first US hyperscale site, opened in 2014 and expanded through 2024 into more than 4 million square feet and 500+ MW of capacity — over $5 billion invested. Meta's own 2024 sustainability report puts the campus's water use above 200 million gallons a year, drawn from Des Moines Water Works and Jordan Aquifer groundwater. Iowa has no mandatory water-disclosure law, so that figure is the exception, not the rule. Altoona has about 20,000 residents; the campus is physically larger than the town, and Iowa now hosts three major hyperscale campuses — Meta, Microsoft, and Google — within 100 miles of each other.",
-            community: "Altoona residents and area farms competing for Jordan Aquifer groundwater and Des Moines Water Works capacity, in a Des Moines River watershed already nitrogen-impaired before hyperscale water demand was added.",
-            sources: "Meta 2024 Sustainability Report · Des Moines Water Works · Data Center Frontier",
-            image: "assets/img/site-altoona.png",
-            imageAlt: "Aerial rendering of Meta's Altoona, Iowa data center campus amid farmland",
-            x: 226.3,
-            y: 588.3
-        },
-        {
             id: "dekalb",
             city: "DeKalb",
             region: "Illinois",
@@ -59,20 +45,6 @@
             y: 579.9
         },
         {
-            id: "westdesmoines",
-            city: "West Des Moines",
-            region: "Iowa",
-            abbr: "IA",
-            operator: "Microsoft",
-            why: "This is where GPT-3 was trained. Shaolei Ren's team at UC Riverside used this facility's own environmental disclosures to calculate the water footprint of that training run — roughly 700,000 litres of freshwater — before any user ever opened the app. Opened in 2008 and expanded through 2024 into 3+ million square feet and about 250 MW, with $3.5 billion-plus invested, the facility now draws an estimated 50–100 million gallons a year from the Raccoon River via West Des Moines Water Works — a river federally listed as one of the most nitrogen-impaired in the US. It is the rare site where a specific model and a specific volume of water can be named in the same sentence.",
-            community: "West Des Moines' municipal supply and the Raccoon River watershed, already under nitrate pressure from agriculture before cooling demand — and the newer buildings' expansion into fast-growing Dallas County (Waukee) — were added.",
-            sources: "Shaolei Ren et al., “Making AI Less Thirsty” (2023) · AP News · Bloomberg 2025 mapping project",
-            image: "assets/img/site-westdesmoines.jpg?v=2",
-            imageAlt: "Aerial view of Microsoft's West Des Moines data center buildings under construction",
-            x: 215,
-            y: 621.6
-        },
-        {
             id: "councilbluffs",
             city: "Council Bluffs",
             region: "Iowa",
@@ -85,6 +57,34 @@
             imageAlt: "Aerial view of Google's Council Bluffs data center at sunset, with a river in the background",
             x: 91.7,
             y: 647.7
+        },
+        {
+            id: "newcarlisle",
+            city: "New Carlisle",
+            region: "Indiana",
+            abbr: "IN",
+            operator: "Amazon Web Services — St. Joseph County",
+            why: "The scale pin. At $11 billion across 1,200-plus acres of former farmland, this is the largest data-center project ever announced in the Midwest — larger than any single Meta, Google or Microsoft site in the region. Five to seven million square feet are planned in phases running to 2030, and at full buildout the campus is designed to draw 2,250+ MW, an unprecedented figure for one Midwest campus; AEP Indiana Michigan Power has already warned that transmission upgrades are required to serve the load. Water withdrawal has not been publicly disclosed, and is projected to run into the hundreds of millions of gallons a year from the St. Joseph River aquifer — the same system New Carlisle residents drink from. Indiana requires disclosure of neither water nor energy. Amazon is also the primary cloud partner of Anthropic, so when a visitor runs a prompt through a modern AI system, there is a real chance the compute is running inside a facility like this one.",
+            community: "A town of about 1,900 people hosting an $11 billion campus built across an area larger than the town itself. More than $4 billion in state and local tax abatements shift the cost of new road, water and school infrastructure onto existing residents, while LaPorte and St. Joseph County organizers raise water and traffic concerns with no disclosure data to argue from.",
+            sources: "South Bend Tribune · Indiana Economic Development Corporation · AEP Indiana Michigan Power filings · Data Center Frontier",
+            image: "assets/img/site-newcarlisle.jpg",
+            imageAlt: "Aerial view at dusk of Amazon's data center campus near New Carlisle, Indiana",
+            x: 626.8,
+            y: 586.5
+        },
+        {
+            id: "grandrapids",
+            city: "Grand Rapids",
+            region: "Michigan",
+            abbr: "MI",
+            operator: "Switch — Kent County",
+            why: "The adaptive-reuse pin. The campus is a pyramid — built in 1989 as Steelcase's corporate headquarters on the southern edge of Grand Rapids, left mostly empty when the furniture company downsized, bought by Switch in 2015 and reopened in 2016 as a Tier IV data center. Two million-plus square feet sit on a 600-acre campus with 100+ MW running today and permitting filed toward 1,000 MW, backed by $5 billion-plus in phased commitments. Switch markets itself as a low-water operator, but no per-facility withdrawal figure is published: the campus draws on Gaines Township municipal supply and on-site wells in the Grand River basin, which drains into Lake Michigan. Michigan has no mandatory disclosure, and the state is becoming a data-center destination — Meta, Google and Microsoft have all announced Michigan investments since 2024 — faster than it is recognised as one.",
+            community: "Gaines Township and greater Grand Rapids, where the region's landmark office building went from making furniture to running servers. The Grand River runs through the city and into Lake Michigan, making this a Great Lakes withdrawal story running parallel to Mount Pleasant's — except Michigan's disclosure regime is silent, so residents have no visibility into water or energy use at all.",
+            sources: "MLive Media Group · Detroit Free Press · Data Center Frontier · Switch permitting filings · Kent County property records",
+            image: "assets/img/site-grandrapids.jpg",
+            imageAlt: "The pyramid-shaped former Steelcase headquarters near Grand Rapids, Michigan, now a Switch data center campus",
+            x: 671.8,
+            y: 492.9
         },
         {
             id: "mountpleasant",
